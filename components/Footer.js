@@ -3,31 +3,31 @@ import { styled } from '../stitches.config'
 
 export default function Footer() {
   const links = [
-    {
-      title: 'Email',
-      url: '/contact',
-      icon: 'ri-mail-line',
-    },
-    {
-      title: 'Twitter',
-      url: 'https://x.com/throwException.dev',
-      icon: 'ri-twitter-line',
-    },
-    {
-      title: 'GitHub',
-      url: 'https://github.com/throwException.dev',
-      icon: 'ri-github-line',
-    },
-    {
-      title: 'linkedin',
-      url: 'https://www.linkedin.com/in/throwException',
-      icon: 'ri-linkedin-line',
-    },
-    {
-      title: 'Medium',
-      url: 'https://medium.com/@throwException',
-      icon: 'ri-medium-line',
-    },
+    // {
+    //   title: 'Email',
+    //   url: '/contact',
+    //   icon: 'ri-mail-line',
+    // },
+    // {
+    //   title: 'Twitter',
+    //   url: 'https://x.com/throwException.dev',
+    //   icon: 'ri-twitter-line',
+    // },
+    // {
+    //   title: 'GitHub',
+    //   url: 'https://github.com/throwException.dev',
+    //   icon: 'ri-github-line',
+    // },
+    // {
+    //   title: 'linkedin',
+    //   url: 'https://www.linkedin.com/in/throwException',
+    //   icon: 'ri-linkedin-line',
+    // },
+    // {
+    //   title: 'Medium',
+    //   url: 'https://medium.com/@throwException',
+    //   icon: 'ri-medium-line',
+    // },
   ]
 
   const renderAnchor = (link, index) => {

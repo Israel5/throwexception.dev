@@ -56,7 +56,7 @@ function About(props) {
               '@bp2': { marginTop: '-6px' },
             }}
           >
-            We are <strong>{name}</strong>, a dedicated team of engineers, developers, and cybersecurity experts based in the heart of <strong>Montreal, Canada</strong>.
+            We are <strong>{name}</strong>, a dedicated team of engineers, developers, and cybersecurity experts based in the heart of <strong>Montreal, Canada</strong> 🇨🇦.
           </Paragraph>
           <Paragraph>
             Beyond writing code, we thrive on creating, automating, and integrating solutions. Our passion for problem-solving drives us to delve into our customers' challenges and address them with innovative technology.

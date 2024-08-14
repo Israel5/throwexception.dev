@@ -10,14 +10,14 @@ export default function Navbar() {
   const router = useRouter()
   const pages = [
     'Home',
-    'Articles',
+    // 'Articles',
     'Projects',
-    'Work',
-    // 'Podcasts',
-    // 'Investing',
-    'Uses',
-    'Tweets',
-    'Credits',
+    // 'Work',
+    // // 'Podcasts',
+    // // 'Investing',
+    // 'Uses',
+    // 'Tweets',
+    // 'Credits',
     'About',
   ]
   const [hovered, setHovered] = useState('')
