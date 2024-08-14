@@ -67,41 +67,41 @@ export default function CommandBar(props) {
         />
       ),
     },
-    {
-      id: 'email',
-      name: 'Send Email',
-      shortcut: ['e'],
-      keywords: 'send-email',
-      section: 'General',
-      perform: () => router.push('/contact'),
-      icon: (
-        <Lottie
-          lottieRef={emailRef}
-          style={iconSize}
-          animationData={emailIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
-    {
-      id: 'source',
-      name: 'View Source',
-      shortcut: ['s'],
-      keywords: 'view-source',
-      section: 'General',
-      perform: () =>
-        window.open('https://github.com/pycoder2000/portfolio', '_blank'),
-      icon: (
-        <Lottie
-          lottieRef={sourceRef}
-          style={iconSize}
-          animationData={sourceIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
+    // {
+    //   id: 'email',
+    //   name: 'Send Email',
+    //   shortcut: ['e'],
+    //   keywords: 'send-email',
+    //   section: 'General',
+    //   perform: () => router.push('/contact'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={emailRef}
+    //       style={iconSize}
+    //       animationData={emailIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
+    // {
+    //   id: 'source',
+    //   name: 'View Source',
+    //   shortcut: ['s'],
+    //   keywords: 'view-source',
+    //   section: 'General',
+    //   perform: () =>
+    //     window.open('https://github.com/pycoder2000/portfolio', '_blank'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={sourceRef}
+    //       style={iconSize}
+    //       animationData={sourceIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
     {
       id: 'home',
       name: 'Home',
@@ -136,23 +136,23 @@ export default function CommandBar(props) {
         />
       ),
     },
-    {
-      id: 'articles',
-      name: 'Articles',
-      shortcut: ['g', 'b'],
-      keywords: 'go-articles',
-      section: 'Go To',
-      perform: () => router.push('/articles'),
-      icon: (
-        <Lottie
-          lottieRef={articlesRef}
-          style={iconSize}
-          animationData={articlesIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
+    // {
+    //   id: 'articles',
+    //   name: 'Articles',
+    //   shortcut: ['g', 'b'],
+    //   keywords: 'go-articles',
+    //   section: 'Go To',
+    //   perform: () => router.push('/articles'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={articlesRef}
+    //       style={iconSize}
+    //       animationData={articlesIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
     {
       id: 'projects',
       name: 'Projects',
@@ -170,108 +170,108 @@ export default function CommandBar(props) {
         />
       ),
     },
-    {
-      id: 'work',
-      name: 'Work',
-      shortcut: ['g', 'w'],
-      keywords: 'go-work',
-      section: 'Go To',
-      perform: () => router.push('/work'),
-      icon: (
-        <Lottie
-          lottieRef={workRef}
-          style={iconSize}
-          animationData={workIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
     // {
-    //   id: 'podcasts',
-    //   name: 'Podcasts',
-    //   shortcut: ['g', 'c'],
-    //   keywords: 'go-podcasts',
+    //   id: 'work',
+    //   name: 'Work',
+    //   shortcut: ['g', 'w'],
+    //   keywords: 'go-work',
     //   section: 'Go To',
-    //   perform: () => router.push('/podcasts'),
+    //   perform: () => router.push('/work'),
     //   icon: (
     //     <Lottie
-    //       lottieRef={podcastsRef}
+    //       lottieRef={workRef}
     //       style={iconSize}
-    //       animationData={podcastsIcon}
+    //       animationData={workIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
+    // // {
+    // //   id: 'podcasts',
+    // //   name: 'Podcasts',
+    // //   shortcut: ['g', 'c'],
+    // //   keywords: 'go-podcasts',
+    // //   section: 'Go To',
+    // //   perform: () => router.push('/podcasts'),
+    // //   icon: (
+    // //     <Lottie
+    // //       lottieRef={podcastsRef}
+    // //       style={iconSize}
+    // //       animationData={podcastsIcon}
+    // //       loop={false}
+    // //       autoplay={false}
+    // //     />
+    // //   ),
+    // // },
+    // // {
+    // //   id: 'investing',
+    // //   name: 'Investing',
+    // //   shortcut: ['g', 'i'],
+    // //   keywords: 'go-investing',
+    // //   section: 'Go To',
+    // //   perform: () => router.push('/investing'),
+    // //   icon: (
+    // //     <Lottie
+    // //       lottieRef={investingRef}
+    // //       style={iconSize}
+    // //       animationData={investingIcon}
+    // //       loop={false}
+    // //       autoplay={false}
+    // //     />
+    // //   ),
+    // // },
+    // {
+    //   id: 'tweets',
+    //   name: 'Tweets',
+    //   shortcut: ['g', 't'],
+    //   keywords: 'go-tweets',
+    //   section: 'Go To',
+    //   perform: () => router.push('/tweets'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={tweetsRef}
+    //       style={iconSize}
+    //       animationData={tweetsIcon}
     //       loop={false}
     //       autoplay={false}
     //     />
     //   ),
     // },
     // {
-    //   id: 'investing',
-    //   name: 'Investing',
-    //   shortcut: ['g', 'i'],
-    //   keywords: 'go-investing',
+    //   id: 'uses',
+    //   name: 'Uses',
+    //   shortcut: ['g', 'u'],
+    //   keywords: 'go-uses',
     //   section: 'Go To',
-    //   perform: () => router.push('/investing'),
+    //   perform: () => router.push('/uses'),
     //   icon: (
     //     <Lottie
-    //       lottieRef={investingRef}
+    //       lottieRef={usesRef}
     //       style={iconSize}
-    //       animationData={investingIcon}
+    //       animationData={usesIcon}
     //       loop={false}
     //       autoplay={false}
     //     />
     //   ),
     // },
-    {
-      id: 'tweets',
-      name: 'Tweets',
-      shortcut: ['g', 't'],
-      keywords: 'go-tweets',
-      section: 'Go To',
-      perform: () => router.push('/tweets'),
-      icon: (
-        <Lottie
-          lottieRef={tweetsRef}
-          style={iconSize}
-          animationData={tweetsIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
-    {
-      id: 'uses',
-      name: 'Uses',
-      shortcut: ['g', 'u'],
-      keywords: 'go-uses',
-      section: 'Go To',
-      perform: () => router.push('/uses'),
-      icon: (
-        <Lottie
-          lottieRef={usesRef}
-          style={iconSize}
-          animationData={usesIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
-    {
-      id: 'credits',
-      name: 'Credits',
-      shortcut: ['g', 'r'],
-      keywords: 'go-credits',
-      section: 'Go To',
-      perform: () => router.push('/credits'),
-      icon: (
-        <Lottie
-          lottieRef={creditsRef}
-          style={iconSize}
-          animationData={creditsIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
+    // {
+    //   id: 'credits',
+    //   name: 'Credits',
+    //   shortcut: ['g', 'r'],
+    //   keywords: 'go-credits',
+    //   section: 'Go To',
+    //   perform: () => router.push('/credits'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={creditsRef}
+    //       style={iconSize}
+    //       animationData={creditsIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
   ]
 
   return (
