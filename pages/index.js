@@ -15,7 +15,7 @@ export async function getStaticProps() {
       metaDescription: `${process.env.NAME} is a startup focused on software engineering, development, and cybersecurity operations. We provide code insights and security solutions.`,
       tagline: 'Software Engineering · Development · Cybersecurity operations', // Empowering Technology with Expert Software Development and Robust Security
       description: 'Code Insights, Security Solutions.',
-      image: '/static/images/home-bw.jpg',
+      image: '/static/images/home.jpg',
     },
   }
 }
