@@ -11,8 +11,8 @@ import Image from 'next/image'
 export async function getStaticProps() {
   return {
     props: {
-      title: process.env.NAME,
-      metaDescription: `${process.env.NAME} is a startup focused on software engineering, development, and cybersecurity operations. We provide code insights and security solutions.`,
+      title: process.env.NEXT_PUBLIC_PAGE_TITLE,
+      metaDescription: `${process.env.NEXT_PUBLIC_NAME} is a startup focused on software engineering, development, and cybersecurity operations. We provide code insights and security solutions.`,
       tagline: 'Software Engineering · Development · Cybersecurity operations', // Empowering Technology with Expert Software Development and Robust Security
       description: 'Code Insights. Security Solutions. Beyond Exceptions.',
       image: '/static/images/home.jpg',

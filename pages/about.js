@@ -13,7 +13,7 @@ import { styled } from '../stitches.config'
 
 export async function getStaticProps() {
   const meta = {
-    title: `About ${process.env.PAGE_TITLE}`,
+    title: `About ${process.env.NEXT_PUBLIC_PAGE_TITLE}`,
     description:
       'At throwException, our name reflects a fundamental concept in programming that embodies our approach to problem-solving. In many programming languages, an "exception" is an event that disrupts the normal flow of execution. When a piece of code encounters an unexpected issue, it "throws" an exception, signaling that something needs to be addressed.',
     description1: 'We embrace this concept as a metaphor for our work. Just as throwing an exception in code prompts a solution, we view challenges and disruptions as opportunities to innovate and improve. Our team is dedicated to tackling complex problems and transforming obstacles into solutions, ensuring that our clients\' systems run smoothly and efficiently.',
@@ -145,8 +145,8 @@ function About(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://throwException.dev/about" property="og:url" />
-        <meta content={`https://throwException.dev${image}`} property="og:image" />
+        <meta content={`${process.env.URL}/about`} property="og:url" />
+        <meta content={`${process.env.URL}${image}`} property="og:image" />
       </Head>
 
       {renderIntro()}
