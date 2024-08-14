@@ -6,6 +6,7 @@ import ShortcutHome from '../components/ShortcutHome'
 import { Wrapper } from '../components/Wrapper'
 import { getPersonJsonLd } from '../lib/json-ld'
 import { styled } from '../stitches.config'
+import Image from 'next/image'
 
 export async function getStaticProps() {
   return {
@@ -27,8 +28,8 @@ export default function Index(props) {
       <Head>
         <title>{title}</title>
         <meta content={title} property="og:title" />
-        <meta content={description} name="description" />
-        <meta content={description} property="og:description" />
+        <meta content={metaDescription} name="description" />
+        <meta content={metaDescription} property="og:description" />
         <meta content={process.env.URL} property="og:url" />
         <meta content={`${process.env.URL}${image}`} property="og:image" />
         <script
@@ -45,6 +46,15 @@ export default function Index(props) {
         <PostContent>
           <PostContainer>
             <div>
+              <Image
+                alt={process.env.NAME}
+                src="/static/images/logos/throwexception_light.svg"
+                width="367"
+                height="64"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
+                priority
+              />
               <p>
                 <strong>
                   {tagline}
