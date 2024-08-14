@@ -28,17 +28,15 @@ export default function Navbar() {
       <Header>
         <Link href="/" passHref>
           <ButtonLogo as="a">
-            <ButtonLogo as="a">
-              <Image
-                alt="throwException"
-                src="/static/images/logos/throwexception_symbol.svg"
-                width="40"
-                height="40"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
-                priority
-              />
-            </ButtonLogo>
+            <Image
+              alt="throwException"
+              src="/static/images/logos/throwexception_symbol.svg"
+              width="40"
+              height="40"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
+              priority
+            />
           </ButtonLogo>
         </Link>
 
