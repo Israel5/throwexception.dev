@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { styled } from '../stitches.config'
+import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter()
@@ -26,7 +27,17 @@ export default function Navbar() {
     <AnimateSharedLayout>
       <Header>
         <Link href="/" passHref>
-          <ButtonLogo as="a">p</ButtonLogo>
+          <ButtonLogo as="a">
+            <Image
+              alt="throwException"
+              src="/static/images/logos/throwexception_symbol.svg"
+              width="40"
+              height="40"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
+              priority
+            />
+          </ButtonLogo>
         </Link>
 
         <Nav>
