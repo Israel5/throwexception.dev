@@ -6,22 +6,19 @@ import ShortcutHome from '../components/ShortcutHome'
 import { Wrapper } from '../components/Wrapper'
 import { getPersonJsonLd } from '../lib/json-ld'
 import { styled } from '../stitches.config'
-import Image from 'next/image'
 
 export async function getStaticProps() {
   return {
     props: {
-      title: process.env.NAME,
-      metaDescription: `${process.env.NAME} is a startup focused on software engineering, development, and cybersecurity operations. We provide code insights and security solutions.`,
-      tagline: 'Software Engineering · Development · Cybersecurity operations', // Empowering Technology with Expert Software Development and Robust Security
-      description: 'Code Insights, Security Solutions.',
+      title: 'throw Exception',
+      description: 'Obsessed with big data',
       image: '/static/images/home-bw.jpg',
     },
   }
 }
 
 export default function Index(props) {
-  const { title, metaDescription, tagline, description, image } = props
+  const { title, description, image } = props
 
   return (
     <Wrapper>
@@ -30,8 +27,8 @@ export default function Index(props) {
         <meta content={title} property="og:title" />
         <meta content={description} name="description" />
         <meta content={description} property="og:description" />
-        <meta content={process.env.URL} property="og:url" />
-        <meta content={`${process.env.URL}${image}`} property="og:image" />
+        <meta content="https://throwException.dev" property="og:url" />
+        <meta content={`https://throwException.dev${image}`} property="og:image" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -46,20 +43,11 @@ export default function Index(props) {
         <PostContent>
           <PostContainer>
             <div>
-              <Image
-                alt={process.env.NAME}
-                src="/static/images/logos/throwexception_light.svg"
-                width="367"
-                height="64"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
-                priority
-              />
+              <h1>{title}</h1>
               <p>
-                <strong>
-                  {tagline}
-                </strong>
-                <br />
+                <strong>Data Engineer Intern at{' '}
+                  <a href="https://glassdoor.com" target="blank">Glassdoor</a>
+                </strong><br />
                 {description}
               </p>
               <ShortcutHome />
