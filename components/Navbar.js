@@ -4,11 +4,12 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import { styled } from '../stitches.config'
+import Image from 'next/image'
 
 export default function Navbar() {
   const router = useRouter()
   const pages = [
-    'About',
+    'Home',
     'Articles',
     'Projects',
     'Work',
@@ -17,6 +18,7 @@ export default function Navbar() {
     'Uses',
     'Tweets',
     'Credits',
+    'About',
   ]
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
@@ -25,14 +27,28 @@ export default function Navbar() {
     <AnimateSharedLayout>
       <Header>
         <Link href="/" passHref>
-          <ButtonLogo as="a">p</ButtonLogo>
+          <ButtonLogo as="a">
+            <Image
+              alt="throwException"
+              src="/static/images/logos/throwexception_symbol.svg"
+              width="40"
+              height="40"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
+              priority
+            />
+          </ButtonLogo>
         </Link>
 
         <Nav>
           <List>
             {pages.map(page => {
-              const path = `/${page.toLowerCase()}`
+              let path = `/${page.toLowerCase()}`
               const isHovered = hovered === page
+
+              if (page === 'Home') {
+                path = '/'
+              }
 
               return (
                 <li key={page}>
@@ -115,7 +131,6 @@ const ButtonHeader = styled('div', {
   border: 'none',
   borderRadius: '$borderRadius',
   color: 'white',
-  cursor: 'pointer',
   cursor: 'pointer',
   height: '34px',
   padding: '0 10px',
