@@ -13,11 +13,12 @@ import { styled } from '../stitches.config'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'About // throw Exception',
+    title: `About ${process.env.PAGE_TITLE}`,
     description:
-      'I am a passionate Data Engineer, having architected and executed integrative solutions across AWS, GCP, and other cloud platforms. I have successfully undertaken digital transformation projects, developed ETL pipelines and led multiple migrations from Dev to Prod. I am also on a journey to become a data steward by trying to understand the business aspect of data driven decision facilitated by my masters degree in Data Science and Artificial Intelligence. I deliver production-ready scalable code using Python, Spark, Scala, and SQL. With a proven track record of delivering impactful solutions, I am excited to contribute my skills and drive insightful solutions as part of your team.',
-    tagline: 'Build. Code. Deliver.',
-    image: '/static/images/about-bw.jpg',
+      'At throwException, our name reflects a fundamental concept in programming that embodies our approach to problem-solving. In many programming languages, an "exception" is an event that disrupts the normal flow of execution. When a piece of code encounters an unexpected issue, it "throws" an exception, signaling that something needs to be addressed.',
+    description1: 'We embrace this concept as a metaphor for our work. Just as throwing an exception in code prompts a solution, we view challenges and disruptions as opportunities to innovate and improve. Our team is dedicated to tackling complex problems and transforming obstacles into solutions, ensuring that our clients\' systems run smoothly and efficiently.',
+    tagline: 'Beyond Exceptions.',
+    image: '/static/images/about.jpg',
     primaryColor: 'pink',
     secondaryColor: 'purple',
   }
@@ -26,7 +27,7 @@ export async function getStaticProps() {
 }
 
 function About(props) {
-  const { title, description, image } = props
+  const { title, description, description1, image } = props
   const [toastTitle, setToastTitle] = React.useState('')
   const [toastDescription, setToastDescription] = React.useState('')
   const [showToast, setShowToast] = React.useState(false)
@@ -34,14 +35,15 @@ function About(props) {
   const downloadRef = React.useRef()
 
   const renderIntro = () => {
+    const name = process.env.NEXT_PUBLIC_NAME;
     return (
       <Container>
         <Section>
           <Image
             alt="throwException"
-            src="/static/images/avatar.jpg"
-            width="336"
-            height="336"
+            src="/static/images/about.jpg"
+            width="350"
+            height="233"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVQImQE0AMv/AFBQUJKSkqmpqaOjowCurq7v7+/Jycm5ubkA////jIyMn5+fg4ODADAwMD09PWlpaQAAAApRGnEHblMWAAAAAElFTkSuQmCC"
             priority
@@ -54,31 +56,10 @@ function About(props) {
               '@bp2': { marginTop: '-6px' },
             }}
           >
-            <strong>Hey, I'm throw Exception</strong>
-            <Pronunciation />I started my journey as a Data Engineer back in
-            2022 at Accenture.
+            We are <strong>{name}</strong>, a dedicated team of engineers, developers, and cybersecurity experts based in the heart of <strong>Montreal, Canada</strong>.
           </Paragraph>
           <Paragraph>
-            I'm originally from India and currently living in{' '}
-            <strong>San Francisco, California</strong> pursuing my Masters in
-            Data Science & Artificial Intelligence.
-          </Paragraph>
-          <Paragraph>
-            I love{' '}
-            <strong>
-              <a href="https://www.throwException.dev/contact" target="_blank">
-                connecting
-              </a>
-            </strong>{' '}
-            with fellow nerds over the weekend. When I'm not working, you'll
-            find me{' '}
-            <strong>
-              <a href="https://x.com/throwexception.dev" target="_blank">
-                tweeting
-              </a>
-            </strong>
-            , going down Reddit rabbit holes, solving crosswords, and
-            binge-watching fascinating video essays.
+            Beyond writing code, we thrive on creating, automating, and integrating solutions. Our passion for problem-solving drives us to delve into our customers' challenges and address them with innovative technology.
           </Paragraph>
         </Section>
       </Container>
@@ -95,12 +76,9 @@ function About(props) {
 
     return (
       <div>
-        <p>
-          This is my professional bio summarizing my strengths and fields of
-          interests.
-        </p>
         <blockquote>
           <p>{description}</p>
+          <p>{description1}</p>
         </blockquote>
         <ButtonsContainer>
           <ButtonPrimary
@@ -119,27 +97,27 @@ function About(props) {
             />
             Copy Bio
           </ButtonPrimary>
-          <span style={{ margin: '0 20px 0 10px' }}>•</span>
-          <ButtonPrimary
-            as="a"
-            download
-            role="button"
-            href="https://drive.google.com/file/d/1XU1FiKk0tJE5PHYPNApq8WSXpiNeVhH5/view?usp=sharing"
-            target="_blank"
-            style={btnStyle}
-            onClick={downloadResume}
-            onMouseEnter={() => downloadRef.current?.play()}
-            onMouseLeave={() => downloadRef.current?.stop()}
-          >
-            <Lottie
-              lottieRef={downloadRef}
-              style={iconStyle}
-              animationData={downloadIcon}
-              loop={false}
-              autoplay={false}
-            />
-            Download Resume
-          </ButtonPrimary>
+          {/*<span style={{ margin: '0 20px 0 10px' }}>•</span>*/}
+          {/*<ButtonPrimary*/}
+          {/*  as="a"*/}
+          {/*  download*/}
+          {/*  role="button"*/}
+          {/*  href="https://drive.google.com/file/d/1XU1FiKk0tJE5PHYPNApq8WSXpiNeVhH5/view?usp=sharing"*/}
+          {/*  target="_blank"*/}
+          {/*  style={btnStyle}*/}
+          {/*  onClick={downloadResume}*/}
+          {/*  onMouseEnter={() => downloadRef.current?.play()}*/}
+          {/*  onMouseLeave={() => downloadRef.current?.stop()}*/}
+          {/*>*/}
+          {/*  <Lottie*/}
+          {/*    lottieRef={downloadRef}*/}
+          {/*    style={iconStyle}*/}
+          {/*    animationData={downloadIcon}*/}
+          {/*    loop={false}*/}
+          {/*    autoplay={false}*/}
+          {/*  />*/}
+          {/*  Download Resume*/}
+          {/*</ButtonPrimary>*/}
         </ButtonsContainer>
       </div>
     )
@@ -173,7 +151,7 @@ function About(props) {
 
       {renderIntro()}
 
-      <h2>Bio</h2>
+      <h2>Our name</h2>
       {renderBio()}
 
       <Toast
