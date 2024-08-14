@@ -8,7 +8,7 @@ import { styled } from '../stitches.config'
 export default function Navbar() {
   const router = useRouter()
   const pages = [
-    'About',
+    'Home',
     'Articles',
     'Projects',
     'Work',
@@ -17,6 +17,7 @@ export default function Navbar() {
     'Uses',
     'Tweets',
     'Credits',
+    'About',
   ]
   const [hovered, setHovered] = useState('')
   const { query } = useKBar()
@@ -31,8 +32,12 @@ export default function Navbar() {
         <Nav>
           <List>
             {pages.map(page => {
-              const path = `/${page.toLowerCase()}`
+              let path = `/${page.toLowerCase()}`
               const isHovered = hovered === page
+
+              if (page === 'Home') {
+                path = '/'
+              }
 
               return (
                 <li key={page}>
@@ -115,7 +120,6 @@ const ButtonHeader = styled('div', {
   border: 'none',
   borderRadius: '$borderRadius',
   color: 'white',
-  cursor: 'pointer',
   cursor: 'pointer',
   height: '34px',
   padding: '0 10px',
