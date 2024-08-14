@@ -9,9 +9,9 @@ import stripHtml from '../lib/strip-html'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Projects // throw Exception',
-    tagline: 'Work. Hobby. Open Source.',
-    image: '/static/images/projects-bw.jpg',
+    title: `Projects ${process.env.NEXT_PUBLIC_PAGE_TITLE}`,
+    tagline: 'Showcase of Innovation',
+    image: '/static/images/projects.jpg',
     primaryColor: 'cyan',
     secondaryColor: 'green',
   }
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
 function Projects(props) {
   const renderFeatured = () => {
-    const featured = ['GRE Prep Tool', 'Stocker', 'Musing', 'Instant MD']
+    const featured = ['GPS Integrations', 'S2BR']
 
     return items
       .map(item => {
@@ -64,7 +64,7 @@ function Projects(props) {
   }
 
   const { title, image } = props
-  const description = `I love building <strong>side projects</strong>. Here you can navigate to all <strong>${getTotalProjects()} projects</strong> that I have built.`
+  const description = `Discover our standout projects, where we transform challenges into innovative solutions. Here you can view <strong>${getTotalProjects()} projects</strong> we have recently worked with.`
 
   return (
     <>
@@ -73,8 +73,8 @@ function Projects(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://throwException.dev/projects" property="og:url" />
-        <meta content={`https://throwException.dev${image}`} property="og:image" />
+        <meta content={`${process.env.URL}/projects`} property="og:url" />
+        <meta content={`${process.env.URL}${image}`} property="og:image" />
       </Head>
 
       <AnimateSharedLayout>
@@ -83,8 +83,8 @@ function Projects(props) {
         <h2>Featured Projects</h2>
         <FeaturedProjects>{renderFeatured()}</FeaturedProjects>
 
-        <h2>All Projects</h2>
-        {renderAll()}
+        {/*<h2>All Projects</h2>*/}
+        {/*{renderAll()}*/}
       </AnimateSharedLayout>
     </>
   )
