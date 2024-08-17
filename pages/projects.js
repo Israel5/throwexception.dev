@@ -10,7 +10,7 @@ import stripHtml from '../lib/strip-html'
 export async function getStaticProps() {
   const meta = {
     title: `Projects ${process.env.NEXT_PUBLIC_PAGE_TITLE}`,
-    tagline: 'Showcase of Innovation',
+    tagline: 'Showcase of Innovation.',
     image: '/static/images/projects.jpg',
     primaryColor: 'cyan',
     secondaryColor: 'green',

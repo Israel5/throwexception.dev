@@ -3,11 +3,11 @@ import { styled } from '../stitches.config'
 
 export default function Footer() {
   const links = [
-    // {
-    //   title: 'Email',
-    //   url: '/contact',
-    //   icon: 'ri-mail-line',
-    // },
+    {
+      title: 'Email',
+      url: '/contact',
+      icon: 'ri-mail-line',
+    },
     // {
     //   title: 'Twitter',
     //   url: 'https://x.com/throwException.dev',
