@@ -4,7 +4,7 @@ import { styled } from '../stitches.config'
 export default function Footer() {
   const links = [
     {
-      title: 'Email',
+      title: 'Contact',
       url: '/contact',
       icon: 'ri-mail-line',
     },

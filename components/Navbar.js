@@ -108,11 +108,14 @@ const Header = styled('header', {
   minHeight: '59px',
   width: '100%',
   flexWrap: 'wrap',
-  position: 'absolute',
+  position: 'fixed',
   top: '0',
   zIndex: 3,
   marginTop: '13px',
   '@bp2': { marginTop: '0' },
+  '-webkit-backdrop-filter': 'blur(3px)',
+  backdropFilter: 'blur(3px)',
+  boxShadow: '0 2px 4px 0 rgba(0,0,0,.1)',
 })
 
 const List = styled('ul', {
@@ -200,6 +203,7 @@ const NavContainer = styled(motion.span, {
     opacity: 0,
     transition: 'opacity $duration ease-in-out',
   },
+  textShadow: '2px 2px 3px #000000',
 })
 
 const NavHovered = styled(motion.span, {
