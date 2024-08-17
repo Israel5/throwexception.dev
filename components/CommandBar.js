@@ -67,23 +67,23 @@ export default function CommandBar(props) {
         />
       ),
     },
-    // {
-    //   id: 'email',
-    //   name: 'Send Email',
-    //   shortcut: ['e'],
-    //   keywords: 'send-email',
-    //   section: 'General',
-    //   perform: () => router.push('/contact'),
-    //   icon: (
-    //     <Lottie
-    //       lottieRef={emailRef}
-    //       style={iconSize}
-    //       animationData={emailIcon}
-    //       loop={false}
-    //       autoplay={false}
-    //     />
-    //   ),
-    // },
+    {
+      id: 'email',
+      name: 'Send Email',
+      shortcut: ['e'],
+      keywords: 'send-email',
+      section: 'General',
+      perform: () => router.push('/contact'),
+      icon: (
+        <Lottie
+          lottieRef={emailRef}
+          style={iconSize}
+          animationData={emailIcon}
+          loop={false}
+          autoplay={false}
+        />
+      ),
+    },
     // {
     //   id: 'source',
     //   name: 'View Source',

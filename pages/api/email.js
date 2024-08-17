@@ -7,8 +7,8 @@ export default async function sendEmail(req, res) {
     const data = req.body
 
     await resend.sendEmail({
-      from: 'throwException.dev <website@throwException.dev>',
-      to: 'hello@throwexception.dev',
+      from: 'throwException.dev <hello@throwexception.dev>',
+      to: process.env.EMAIL,
       replyTo: data.email,
       subject: `${data.name} - via throwException.dev`,
       react: <EmailTemplate {...data} />,

@@ -8,9 +8,9 @@ import { styled } from '../stitches.config'
 
 export async function getStaticProps() {
   const meta = {
-    title: 'Contact // throw Exception',
-    tagline: 'Email me. Like in the old days.',
-    image: '/static/images/contact-bw.jpg',
+    title: `Contact ${process.env.NEXT_PUBLIC_PAGE_TITLE}`,
+    tagline: 'Hello World Begins With a Message.',
+    image: '/static/images/contact.jpg',
     primaryColor: 'cyan',
     secondaryColor: 'green',
   }
@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 function Contact(props) {
   const { title, image } = props
-  const description = `<strong>I love chatting</strong> with software engineers, tech founders, students, and geeks. I promise that I'll try to reply to your email in a timely manner.`
+  const description = `Whether you have a <strong>question</strong>, a project <strong>idea</strong>, or just want to <strong>connect</strong>, we're here to <strong>listen</strong>. Fill out the form below and let’s start your Hello World story!.`
   const [isEmailSent, setIsEmailSent] = React.useState(undefined)
   const [showToast, setShowToast] = React.useState(false)
 
@@ -30,10 +30,10 @@ function Contact(props) {
     try {
       const isProd = process.env.NODE_ENV === 'production'
       const base = isProd
-        ? 'https://www.throwException.dev'
+        ? process.env.URL
         : 'http://localhost:3000'
 
-      await fetch(`${base}/api/email`, {
+      const response = await fetch(`${base}/api/email`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -42,6 +42,10 @@ function Contact(props) {
           message: e.target.message.value,
         }),
       })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
 
       setIsEmailSent(true)
       setShowToast(true)
@@ -59,8 +63,8 @@ function Contact(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content="https://throwException.dev/contact" property="og:url" />
-        <meta content={`https://throwException.dev${image}`} property="og:image" />
+        <meta content={`${process.env.URL}/contact`} property="og:url" />
+        <meta content={`${process.env.URL}${image}`} property="og:image" />
       </Head>
 
       <Box>
@@ -69,14 +73,14 @@ function Contact(props) {
         <Form onSubmit={onSendEmail}>
           <FormGroup>
             <Label htmlFor="name">Name</Label>
-            <Input id="name" type="text" placeholder="James Bond" required />
+            <Input id="name" type="text" placeholder="John Doe" required />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="email">Email</Label>
             <Input
               id="email"
               type="email"
-              placeholder="james@bond.com"
+              placeholder="johndoe@example.com"
               required
             />
           </FormGroup>
@@ -84,7 +88,7 @@ function Contact(props) {
             <Label htmlFor="message">Message</Label>
             <Textarea
               id="message"
-              placeholder="How can I help you?"
+              placeholder="How can we help you?"
               rows="4"
               required
             />
