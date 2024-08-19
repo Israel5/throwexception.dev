@@ -3,6 +3,7 @@ title: Apple and the case for competition.
 description: "The EU announced plans to force all devices – including iPhones – to use a common charging port."
 image: /static/images/blog/apple-competition.jpg
 date: "2021-09-23"
+category: [laravel]
 ---
 
 Earlier today, the European Union [announced](https://www.theverge.com/2021/9/23/22626723/eu-commission-universal-charger-usb-c-micro-lightning-connector-smartphones) plans to force all devices - including iPhones - to use a common charging port. This is notable, as Apple has used their proprietary Lightning connector for years, while the rest of the industry moved on to USB-C. Under the new plan, Apple would have to change this.

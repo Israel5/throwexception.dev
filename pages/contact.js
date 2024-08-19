@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 function Contact(props) {
   const { title, image } = props
-  const description = `Whether you have a <strong>question</strong>, a project <strong>idea</strong>, or just want to <strong>connect</strong>, we're here to <strong>listen</strong>. Fill out the form below and let’s start your Hello World story!.`
+  const description = `Whether you have a <strong>question</strong>, a project <strong>idea</strong>, or just want to <strong>connect</strong>, we're here to <strong>listen</strong>. Fill out the form below and let’s start your Hello World story!`
   const [isEmailSent, setIsEmailSent] = React.useState(undefined)
   const [showToast, setShowToast] = React.useState(false)
 
@@ -80,7 +80,7 @@ function Contact(props) {
             <Input
               id="email"
               type="email"
-              placeholder="johndoe@example.com"
+              placeholder="john.doe@example.com"
               required
             />
           </FormGroup>
@@ -102,8 +102,8 @@ function Contact(props) {
           title={isEmailSent ? 'Email sent :D' : 'Error :('}
           description={
             isEmailSent
-              ? 'Thanks for taking the time to write it.'
-              : 'Something wrong happened. Try again later.'
+              ? 'Success! Your data packet has been transmitted.'
+              : 'Error 500: Submission failed. Debug and try again?'
           }
           isSuccess={isEmailSent}
           showToast={showToast}

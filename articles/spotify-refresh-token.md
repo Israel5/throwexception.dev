@@ -3,6 +3,7 @@ title: How to get the Spotify Refresh Token
 description: "Getting the Spotify Refresh Token doesn't need to be a hassle any longer."
 image: /static/images/blog/spotify-refresh-token.jpg
 date: "2022-07-12"
+category: [articles]
 ---
 
 In this blog, I'll show you 2 approaches to generate the Spotify Refresh Token and then use that to programmatically create an access token when needed.

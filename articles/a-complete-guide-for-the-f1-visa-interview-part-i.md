@@ -3,6 +3,7 @@ title: A complete guide for the F-1 visa interview - Part I (Biometrics)
 description: "The complete guide for F1 Visa Interview, starting with biometrics. Learn about the required documents, when to arrive, and what to expect."
 image: /static/images/blog/a-complete-guide-for-the-f1-visa-interview-part-i.jpg
 date: "2023-05-02"
+category: [laravel]
 ---
 
 Congratulations on getting the admit to your dream university! (Even if you didn’t, don’t worry, most students figure it out once they get there). At this point, you have arrived at the pinnacle of your journey. This is the ultimate obstacle that stands between you and your dreams. However, just like all the other challenges you have encountered thus far, this one will be a piece of cake as long as you are well-prepared.

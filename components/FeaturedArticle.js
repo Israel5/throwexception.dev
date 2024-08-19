@@ -69,6 +69,10 @@ const ImageContainer = styled('div', {
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
   filter: 'grayscale(1)',
+  transition: 'filter 1s ease', // Smooth transition for filter changes
+  '&:hover': {
+    filter: 'grayscale(0)', // Remove grayscale on hover
+  },
 })
 
 const Content = styled('div', {
