@@ -3,6 +3,7 @@ title: Apple doesn't care about privacy, and it's showing.
 description: "Apple announced that it would begin checking content uploaded to iCloud Photos, against a list of known CSAM material. This is fine on it's own, however the system could easily be abused."
 image: /static/images/blog/apple-privacy.jpg
 date: "2022-07-06"
+category: ["articles", "laravel"]
 ---
 
 A few days ago, Apple announced that it would begin checking content uploaded to iCloud Photos - the company's photo backup/synchronization service - against a list of known CSAM material. **This is fine on it's own**, however the system could easily be abused.

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import BlogDate from './BlogDate'
+import { Description } from '@radix-ui/react-toast'
 
 export default function ListItem(props) {
   // Articles
@@ -17,6 +18,7 @@ export default function ListItem(props) {
                 <BlogDate dateString={props.date} />
               </Date>
             </Animation>
+            <Description>{props.description}</Description>
           </Anchor>
         </Link>
       </ArticleItem>

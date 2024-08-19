@@ -9,7 +9,8 @@ import stripHtml from '../lib/strip-html'
 import { styled } from '../stitches.config'
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['date', 'skip', 'slug', 'title', 'description', 'category'], ['articles'])
+  const allPosts = getAllPosts(['date', 'skip', 'slug', 'title', 'category'], ['laravel'])
+  // console.log(allPosts)
 
   const featuredParams = [
     'date',
@@ -33,8 +34,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      title: `Articles ${process.env.NEXT_PUBLIC_PAGE_TITLE}`,
-      tagline: 'Behind the Code: Articles and Analysis.',
+      title: `Laravel ${process.env.NEXT_PUBLIC_PAGE_TITLE}`,
+      tagline: 'Artisans of the Web',
       image: '/static/images/articles.jpg',
       primaryColor: 'yellow',
       secondaryColor: 'pink',
@@ -73,6 +74,7 @@ function Articles(props) {
             title={post.title}
             description={post.description}
             date={post.date}
+            content={post.content}
           />
         )
       }
@@ -89,7 +91,7 @@ function Articles(props) {
         <meta content={title} property="og:title" />
         <meta content={stripHtml(description)} name="description" />
         <meta content={stripHtml(description)} property="og:description" />
-        <meta content={`${process.env.URL}/articles`} property="og:url" />
+        <meta content={`${process.env.URL}/laravel`} property="og:url" />
         <meta content={`${process.env.URL}${image}`} property="og:image" />
       </Head>
 
