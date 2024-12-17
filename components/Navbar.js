@@ -12,7 +12,7 @@ export default function Navbar() {
     'Home',
     // 'Articles',
     // 'Laravel',
-    'Projects',
+    // 'Projects',
     // 'Work',
     // // 'Podcasts',
     // // 'Investing',
