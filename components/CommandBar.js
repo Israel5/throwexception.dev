@@ -153,23 +153,23 @@ export default function CommandBar(props) {
     //     />
     //   ),
     // },
-    {
-      id: 'projects',
-      name: 'Projects',
-      shortcut: ['g', 'p'],
-      keywords: 'go-projects',
-      section: 'Go To',
-      perform: () => router.push('/projects'),
-      icon: (
-        <Lottie
-          lottieRef={projectsRef}
-          style={iconSize}
-          animationData={projectsIcon}
-          loop={false}
-          autoplay={false}
-        />
-      ),
-    },
+    // {
+    //   id: 'projects',
+    //   name: 'Projects',
+    //   shortcut: ['g', 'p'],
+    //   keywords: 'go-projects',
+    //   section: 'Go To',
+    //   perform: () => router.push('/projects'),
+    //   icon: (
+    //     <Lottie
+    //       lottieRef={projectsRef}
+    //       style={iconSize}
+    //       animationData={projectsIcon}
+    //       loop={false}
+    //       autoplay={false}
+    //     />
+    //   ),
+    // },
     // {
     //   id: 'work',
     //   name: 'Work',
